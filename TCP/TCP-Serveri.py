@@ -138,9 +138,10 @@ def klient_thread(lidhja,addr):
 
 
 while True: 
-    lidhjaectionSocket, addr = serverSocket.accept()
+    lidhjaSocket, addr = serverSocket.accept()
     print('Klienti u lidh ne serverin %s me port %s' % addr)
-    start_new_thread(klient_thread,(lidhjaectionSocket,addr,))
+    start_new_thread(klient_thread,(lidhjaSocket,addr,))
+
 
 
 
