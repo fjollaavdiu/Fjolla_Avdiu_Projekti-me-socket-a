@@ -120,7 +120,7 @@ def METODAT(metoda_arr,lidhja,addr):
             lidhja.send(str.encode("Ju lutem shenoni se pari kerkesen pastaj shifren \n"))
 
     else:
-        print("JU LUTEM SHENONI NJEREN NGA METODAT")
+        print("JU LUTEM SHENONI NJEREN NGA KERKESAT")
     
 def klient_thread(lidhja,addr):
     while True:
