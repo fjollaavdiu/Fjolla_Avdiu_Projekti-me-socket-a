@@ -109,15 +109,19 @@ def METODAT(metoda_arr,lidhja,addr):
         except ValueError:
             lidhja.send(str.encode("Ju lutem shenoni nje shifer pas kerkeses FIBONACCI"))
 
+
     elif(metoda_arr[0]=='KONVERTIMI'):
+        S1="Konvertimet:"
+        S2="Konvertimet"
         try:
-            s=metoda_arr[1]
-            n=float(metoda_arr[2])
-            lidhja.send(str.encode(str(KONVERTIMI((opt,vlera))))
+            opt=metoda_arr[1]
+            vlera=float(metoda_arr[2])
+            lidhja.send(str.encode(str(KONVERTIMI((opt,vlera)))))
         except IndexError:
-            lidhja.send(str.encode("Ju lutem shenoni kerkesen qe deshironi ta konvertoni"))
+            lidhja.send(str.encode("Ju lutem shenoni kerkesen qe deshironi ta konvertoni"+S1+S2))
         except ValueError:
-            lidhja.send(str.encode("Ju lutem shenoni se pari kerkesen pastaj shifren \n"))
+            lidhja.send(str.encode("Ju lutem shenoni se pari kerkesen pastaj shifren"+S1+S2))
+
 
     else:
         print("JU LUTEM SHENONI NJEREN NGA KERKESAT")
